@@ -1,20 +1,5 @@
 <div class="row big-circle">
-    <div class="container">
-        <div class="row" style="display: inline-block;">
-            <div class="logo">
-                <img src="../../assets/images/logo.png" alt="">
-            </div>
-            <div class="nvigation">
-                <div class="row">
-                    <a href="" class="nav-item"> Products</a>
-                    <a href="" class="nav-item"> Solutions</a>
-                    <a href="" class="nav-item"> Pricing</a>
-                    <a href="" class="nav-login"> Login</a>
-                    <a href="" class="nav-Get-Started">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  
     <div class="row" style="display: flex;">
         <div class="col-md-6 small-circle">
             <div class="row">
@@ -30,7 +15,7 @@
         </div>
         <div class="col-md-6 claculator">
             <div class="row" style="display: flex;">
-                <div class="col-md-6" style="padding-right: 0px;">
+                <div class="col-md-6" style="padding-right: 0px;z-index: 1;">
                     <div class="card">
                         <div class="row">
                             <p class="header">Eligibility Calculator</p>
@@ -41,25 +26,31 @@
                             </div>
                             <div class="row">
                                 <i class="fa fa-inr" aria-hidden="true"></i>
-                                <span>{{mothlyIncome}}</span>
-                                  <mat-slider
+                                <span>{{mothlyIncome | number}}</span>
+                                  <mat-slider style="margin-top: -18px;"
                                   (input)="changeValueIncome($event)"
                                   tickInterval="1000"
                                   step="1000"
                                   [min]="min"
                                   [max]="max"
                                   aria-label="units"></mat-slider>
-                                  <div class="row">
-                                    <span class="rangemin">{{min}}</span><span class="rangemax">{{max}}</span>
+                                  <div class="row" style="margin-top: -6px;">
+                                    <span class="rangemin">
+                                        <i class="fa fa-inr " aria-hidden="true"></i>{{min | number}}
+                                    </span>
+                                   
+                                    <span class="rangemax">
+                                        <i class="fa fa-inr" aria-hidden="true"></i> {{max | number}}
+                                    </span>
                                   </div>
                             </div>
-                            <div class="row" style="margin-top: 20px;">
+                            <div class="row" style="margin-top: 40px;">
                                 <p>Monthly Expense</p>
                             </div>
                             <div class="row">
                                 <i class="fa fa-inr" aria-hidden="true"></i>
-                                <span>{{monthlyExpense}}</span>
-                                <mat-slider 
+                                <span>{{monthlyExpense | number}}</span>
+                                <mat-slider  style="margin-top: -17px;"
                                 tickInterval="1000"
                                 step="1000"
                                 min="0"
@@ -68,25 +59,26 @@
                                     aria-label="units">
                                 </mat-slider>
                             </div>
-                            <div class="row">
-                                <mat-form-field style="width: 100%;">
+                            <div class="row"  style="margin-top: 20px;">
+                                <mat-form-field style="width: 100%;" [(ngModel)]="months">
                                     <mat-label>Repayment Tenure</mat-label>
                                     <mat-select >
-                                        <mat-option value=6>6 Months</mat-option>
-                                        <mat-option value=12>12 Months</mat-option>
-                                        <mat-option value=18>18 Months</mat-option>
+                                        <mat-option [value]=6>6 Months</mat-option>
+                                        <mat-option [value]=12>12 Months</mat-option>
+                                        <mat-option [value]=18>18 Months</mat-option>
                                     </mat-select>
                                 </mat-form-field>
                             </div>
                             <div class="row">
+                                 <!-- {{isExisting}} -->
                                 <p style="display: inline-block;">Do you have any existing loans ?</p>
-                                <mat-slide-toggle style="float: right;"></mat-slide-toggle>
+                                <mat-slide-toggle style="float: right;" (change)="isLoanExisting($event)" ></mat-slide-toggle>
                             </div>
-                            <div class="row">
-                                <mat-form-field class="example-full-width" style="width: 100%; margin-top: 20px;">
-                                    <mat-label>Emi of existing loans(Optional)</mat-label>
-                                    <input matInput type="number" placeholder="Emi of existing loans(Optional)">
-                                </mat-form-field>
+                            <div class="row" style="margin-top: 20px;">
+                                    <mat-form-field  class="example-full-width" style="width: 100%;">
+                                        <mat-label>Emi of existing loans(Optional)</mat-label>
+                                        <input [disabled]="isExisting" type="number" matInput  placeholder="Emi of existing loans(Optional)">
+                                    </mat-form-field>
                             </div>
                         </div>
                     </div>
@@ -106,22 +98,26 @@
                 </div>
             </div>
         </div>
+       
     </div>
+      <div class="row" style="margin-top:-10px">
+                 <img src="../../assets/images/accounting_dots.svg" alt="" class="seconddoted" >
+            </div>
     <div class="row sol_wave_bg">
         <div class="container" style="margin-top: 10%;padding-bottom: 2%;">
             <div class="row row-flax">
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card change-color-card">
                         <img src="../../assets/images/Get Paid Instantly.png" alt="" style="margin-bottom: 10px;">
                         <p class="heading">Quick cash disbursement</p>
                         <p class="disc">Get terms loans that your business needs within 72 hrs</p>
                     </div>
-                    <div class="card">
+                    <div class="card change-color-card">
                         <img src="../../assets/images/Low interest rate.png" alt="" style="margin-bottom: 10px;">
                         <p  class="heading">Low-interest rate</p>
                         <p class="disc">Achieve your financial goals with an amazing interest rate starting at 13% per annum</p>
                     </div>
-                    <div class="card">
+                    <div class="card change-color-card">
                         <img src="../../assets/images/Secure Payments.png" alt="" style="margin-bottom: 10px;">
                         <p class="heading">Zero Paperwork</p>
                         <p class="disc">Get started instantly by submitting only your basic details & bank statements</p>
@@ -130,10 +126,10 @@
                 <div class="col-md-3" style="margin-top: 8%;">
                     <div class="card change-color-card">
                         <img src="../../assets/images/freelancer_feature_icon_6@1.5x.png" alt="" style="margin-bottom: 10px;">
-                        <p class="head" >Ace your business finances</p>
-                        <p class="dis">Manage banking, accounting & everything in between, on one platform</p>
+                        <p class="heading" >Ace your business finances</p>
+                        <p class="disc">Manage banking, accounting & everything in between, on one platform</p>
                     </div>
-                    <div class="card">
+                    <div class="card change-color-card">
                         <img src="../../assets/images/Covid.png" alt="" style="margin-bottom: 10px;">
                         <p class="heading">Loans to fight COVID-19</p>
                         <p class="disc">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</p>

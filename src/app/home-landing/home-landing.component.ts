@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home-landing',
@@ -20,11 +21,30 @@ export class HomeLandingComponent implements OnInit {
   monthlyExpense=0
   total=0
   amount=0
-  months=6
+  months=12
+  isExisting=true
+  optionalForm:FormGroup
+  constructor(private fb:FormBuilder) { 
+    this.optionalForm=this.fb.group({
+      option:[""]
+    })
+  }
+acc={}
+isLoanExisting(event){
+ 
+  if(event.checked){
+    this.isExisting=false
+  }else{
+    this.isExisting=true
+  }
   
-  constructor() { }
+
+}
+existingEmi=""
 
   ngOnInit(): void {
+    
+    
   }
 
 }

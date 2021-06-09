@@ -1,0 +1,75 @@
+
+.navrow{
+    position: fixed;
+    background: white;
+    z-index: 10;
+    box-shadow: 4px 2px 5px 0px #80808047;
+}
+.logo {
+    width: 10%;
+    display: inline-block;
+}
+.nvigation {
+    display: block;
+    position: absolute;
+    top: 32%;
+    right: 0%;
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #222222;
+    }
+    .nav-item:hover{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #663399;
+    }
+    .nav-login {
+        color: #663399;
+        opacity: 1;
+        padding: 4px 22px 5px 20px;
+        border: 2px solid #663399;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+    .nav-login:hover {
+        background-color: #663399;
+        color: white;
+        opacity: 1;
+        padding: 4px 22px 5px 20px;
+        box-shadow: 0px 0px 20px #00000033;
+        border: 2px solid #663399;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-decoration: none;
+    }
+    .nav-Get-Started {
+        text-decoration: none;
+        background: transparent linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #00000033;
+        color: white;
+        opacity: 1;
+        padding: 6px 17px 8px 16px;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 60px;
+    }
+    .nav-Get-Started:hover {
+        text-decoration: none;
+        background: #663399;
+        box-shadow: 0px 0px 20px #00000033;
+        color: white;
+        opacity: 1;
+        padding: 6px 17px 8px 16px;
+        border-radius: 30px;
+        margin-left: 10px;
+        margin-right: 60px;
+    }
+}

@@ -9,10 +9,15 @@ import {MatSliderModule} from '@angular/material/slider';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeLandingComponent
+    HomeLandingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +26,11 @@ import {MatInputModule} from '@angular/material/input';
     MatSliderModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
