@@ -5,6 +5,9 @@
     background-position-x: 110%;
     width: 100%;
     padding-top: 145px;
+    .small-circle-top{
+        display: flex;
+    }
     .small-circle {
         background-position-x: -29%;
         background-size: 60%;
@@ -30,6 +33,9 @@
         .hand-shake-image {
             width: 50%;
             margin-left: 20%;
+            img{
+                width: 100%;
+            }
         }
         .doted {
             text-align: right;
@@ -39,12 +45,42 @@
         }
     }
     .claculator {
+        .card-top{
+            padding-right: 0px;
+            z-index: 1;
+        }
         .card {
             background-color: white;
             box-shadow: 0px 2px 5px -2px #cdc3c3;
             border-radius: 10px;
             margin-top: 23%;
             .content {
+                .monthlyExpRow{
+                    margin-top: 40px;
+                }
+                .m-exp{
+                    margin-top: -17px;
+                }
+                .repTen-Row{
+                    margin-top: 20px;
+                    mat-form-field{
+                        width: 100%;
+                    }
+                }
+                .tgl-row{
+                    p{
+                        display: inline-block;
+                    }
+                    mat-slide-toggle{
+                        float: right;
+                    }
+                }
+                .mt-20{
+                    margin-top: 20px;
+                    mat-form-field{
+                        width: 100%;
+                    }
+                }
                 padding: 25px;
                 p {
                     font-size: 13px;
@@ -52,18 +88,22 @@
                     font-weight: 700;
                     margin-bottom: 0px;
                 }
-                .rangemax {
-                    font-size: 10px;
-                    float: right;
-                    color: #7c79809c;
-                    font-weight: 600;
+                .range{
+                    margin-top: -6px;
+                    .rangemax {
+                        font-size: 10px;
+                        float: right;
+                        color: #7c79809c;
+                        font-weight: 600;
+                    }
+                    .rangemin {
+                        font-size: 10px;
+                        float: left;
+                        font-weight: 600;
+                        color: #7c79809c;
+                    }
                 }
-                .rangemin {
-                    font-size: 10px;
-                    float: left;
-                    font-weight: 600;
-                    color: #7c79809c;
-                }
+                
 
                 span {
                     margin-left: 5px;
@@ -89,6 +129,12 @@
             color: white;
             margin-top: 92%;
             margin-left: 5px;
+            .lm-text{
+                margin-top: 35px;
+            }
+            .fa-inr{
+                color: white;
+            }
             .getmoney {
                 margin: auto;
                 display: block;
@@ -137,15 +183,36 @@
             }
         }
     }
+    .mt-10{
+        margin-top:-10px;
+    }
+
     .sol_wave_bg {
         background-image: url("../../assets/images/sol_wave_bg.svg");
         background-repeat: no-repeat;
         margin-top: -70px;
+        .container{
+            margin-top: 10%;
+            padding-bottom: 2%;
+            .mt-8{
+                margin-top: 8%;
+            }
+            .mt-10-per{
+                margin-top: 10%;
+            }
+            .change-color-card{
+                margin-bottom: 10px;
+                .covid{
+                    margin-bottom: 10px;
+                }
+            }
+        }
     }
 }
 .mat-slider-horizontal {
     height: 48px;
     width: 100%;
+    margin-top: -18px;
 }
 ::ng-deep.mat-accent .mat-slider-track-fill,
 .mat-accent .mat-slider-thumb,
@@ -279,4 +346,7 @@ mat-select {
     margin-right: 3%;
     display: block;
     margin-left: auto;
+}
+.d-flax{
+    display: flex;
 }

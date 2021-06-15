@@ -5,6 +5,14 @@
     z-index: 10;
     box-shadow: 4px 2px 5px 0px #80808047;
 }
+.container-row{
+    display: inline-block;
+    .logo{
+        img{
+            height: 65px;
+        }
+    }
+}
 .logo {
     width: 10%;
     display: inline-block;
